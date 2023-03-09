@@ -1,0 +1,32 @@
+Model:
+  Name: ST_GCN
+  inchannels: 3
+  n_features: 64
+  n_layers: 9
+  n_classes: 4
+
+Dataset:
+  Padding With Loop: 1000
+  Rorate: 5
+  batch size: 4
+  train_path: 'Dataset/train.pkl'
+  val_path: 'Dataset/val.pkl'
+
+
+Training config:
+
+  Epoch: 200
+  Optimizers:
+    Name: SGD
+    lr: 0.001
+  lr_scheduler:
+    Name: Step
+    step size: 40
+    factor: 0.1
+  path2save: 'Save/'
+  save checkpoint: 1
+  save best score: 'f1'
+
+
+
+
